@@ -27,3 +27,9 @@ footerElement.style.marginTop = 'auto';
 
 // 5. Insertar el footer al final del <body> en el DOM
 document.body.appendChild(footerElement);
+
+// Agregar un evento al botón para desplazarse al html de formulario-absurdo.html
+const botonFormulario = document.getElementById('botonFormulario');
+botonFormulario.addEventListener('click', () => {
+    window.location.href = 'formulario-absurdo.html';
+});
