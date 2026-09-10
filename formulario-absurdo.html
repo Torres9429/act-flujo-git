@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Absurdo</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #2b6cb0;
+            margin-bottom: 6px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #2b6cb0;
+        }
+
+        .checkbox-group {
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            color: #4a5568;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            background-color: #2b6cb0;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #2c5282;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Contenido principal -->
+    <main class="content">
+        <section class="section">
+            <h2>Formulario Absurdo</h2>
+            <p>Ingresa los datos solicitados en los 5 campos para completar la misión.</p>
+
+            <form id="formularioAbsurdo" class="form-container">
+
+                <!-- Input 1: Nombre -->
+                <div class="form-group">
+                    <label for="nombre">1. Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+
+                <!-- Input 2: Edad -->
+                <div class="form-group">
+                    <label for="edad">2. Edad</label>
+                    <input type="number" id="edad" name="edad" placeholder="Ej. 20" min="1" max="120" required>
+                </div>
+
+                <!-- Input 3: Correo Electrónico -->
+                <div class="form-group">
+                    <label for="correo">3. Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <!-- Input 4: Contraseña -->
+                <div class="form-group">
+                    <label for="password">4. Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+
+                <!-- Input 5: Checkbox Términos -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">5. Acepto los términos y condiciones</label>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Enviar Formulario</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
